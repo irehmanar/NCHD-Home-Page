@@ -17,3 +17,9 @@ tabs.forEach(function (tab) {
         });
     });
 });
+
+// background: rgba(4, 52, 93, 0.726);
+
+// #004658
+
+// #027b9a
