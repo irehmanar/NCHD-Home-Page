@@ -1,0 +1,1098 @@
+/* Resetting default styles for all elements */
+* {
+  padding: 0;
+  margin: 0;
+  color: rgb(255, 234, 236); /* Setting text color */
+}
+
+/* Styling for hovered list items */
+li.item:hover {
+  text-decoration: underline; /* Underline effect on hover */
+  text-shadow: 5px 5px 5px whitesmoke; /* Adding shadow on hover */
+}
+
+/* Styling for a specific font */
+.pacifico-regular {
+  font-family: 'Pacifico', cursive; /* Using Pacifico font */
+  font-weight: 400; /* Setting font weight */
+  font-style: normal; /* Setting font style */
+}
+
+/* Mobile Navigation Styling */
+
+/* Hiding default margins, paddings, setting text color, and font family */
+* {
+  margin: 0;
+  padding: 0;
+  color: #f2f5f7;
+  font-family: sans-serif;
+}
+
+/* Setting letter spacing and font weight */
+* {
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+/* Disabling horizontal overflow on body */
+body {
+  overflow-x: hidden;
+}
+
+/* Styling navigation bar */
+nav {
+  height: 6rem; /* Setting height */
+  width: 100vw; /* Setting width */
+  background-color: #131418; /* Setting background color */
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2); /* Adding box shadow */
+  display: flex; /* Displaying as flex container */
+  position: fixed; /* Positioning fixed */
+  z-index: 10; /* Setting z-index */
+}
+
+/* Styling logo */
+.logo {
+  padding: 1vh 1vw; /* Adding padding */
+  text-align: center; /* Centering text */
+}
+
+/* Styling logo image */
+.logo img {
+  height: 5rem; /* Setting height */
+  width: 5rem; /* Setting width */
+}
+
+/* Styling navigation links */
+.nav-links {
+  display: flex; /* Displaying as flex container */
+  list-style: none; /* Removing list style */
+  width: 88vw; /* Setting width */
+  padding: 0 0.7vw; /* Adding padding */
+  justify-content: space-evenly; /* Justifying content */
+  align-items: center; /* Aligning items */
+  text-transform: uppercase; /* Uppercasing text */
+}
+
+/* Styling navigation link items */
+.nav-links li a {
+  text-decoration: none; /* Removing text decoration */
+  margin: 0 0.7vw; /* Adding margin */
+}
+
+/* Styling navigation link items on hover */
+.nav-links li a:hover {
+  color: #61dafb; /* Changing color on hover */
+}
+
+/* Styling navigation link items pseudo elements */
+.nav-links li {
+  position: relative; /* Positioning relative */
+}
+
+/* Styling navigation link items pseudo elements on hover */
+.nav-links li a::before {
+  content: ''; /* Adding content */
+  display: block; /* Displaying as block */
+  height: 3px; /* Setting height */
+  width: 0%; /* Setting initial width */
+  background-color: #61dafb; /* Setting background color */
+  position: absolute; /* Positioning absolute */
+  transition: all ease-in-out 250ms; /* Adding transition */
+  margin: 0 0 0 10%; /* Adding margin */
+}
+
+/* Styling navigation link items pseudo elements on hover */
+.nav-links li a:hover::before {
+  width: 80%; /* Changing width on hover */
+}
+
+/* Styling login button */
+.login-button {
+  background-color: transparent; /* Setting background color */
+  border: 1.5px solid #f2f5f7; /* Adding border */
+  border-radius: 2em; /* Adding border radius */
+  padding: 0.6rem 0.8rem; /* Adding padding */
+  margin-left: 2vw; /* Adding margin */
+  font-size: 1rem; /* Setting font size */
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Styling login button on hover */
+.login-button:hover {
+  color: #131418; /* Changing color on hover */
+  background-color: #f2f5f7; /* Changing background color on hover */
+  border: 1.5px solid #f2f5f7; /* Changing border color on hover */
+  transition: all ease-in-out 350ms; /* Adding transition */
+}
+
+/* Styling join button */
+.join-button {
+  color: #131418; /* Setting color */
+  background-color: #61dafb; /* Setting background color */
+  border: 1.5px solid #61dafb; /* Adding border */
+  border-radius: 2em; /* Adding border radius */
+  padding: 0.6rem 0.8rem; /* Adding padding */
+  font-size: 1rem; /* Setting font size */
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Styling join button on hover */
+.join-button:hover {
+  color: #f2f5f7; /* Changing color on hover */
+  background-color: transparent; /* Changing background color on hover */
+  border: 1.5px solid #f2f5f7; /* Changing border color on hover */
+  transition: all ease-in-out 350ms; /* Adding transition */
+}
+
+/* Styling hamburger icon */
+.hamburger div {
+  width: 30px; /* Setting width */
+  height: 3px; /* Setting height */
+  background: #f2f5f7; /* Setting background color */
+  margin: 5px; /* Adding margin */
+  transition: all 0.3s ease; /* Adding transition */
+}
+
+/* Styling hamburger icon */
+.hamburger {
+  display: none; /* Hiding by default */
+}
+
+/* Styling for small screens */
+@media screen and (max-width: 800px) {
+  nav {
+    position: fixed; /* Positioning fixed */
+    z-index: 3; /* Setting z-index */
+  }
+
+  .hamburger {
+    display: block; /* Displaying block */
+    position: absolute; /* Positioning absolute */
+    cursor: pointer; /* Adding cursor */
+    right: 5%; /* Setting right position */
+    top: 50%; /* Setting top position */
+    transform: translate(-5%, -50%); /* Translating position */
+    z-index: 2; /* Setting z-index */
+    transition: all 0.7s ease; /* Adding transition */
+  }
+
+  .nav-links {
+    position: fixed; /* Positioning fixed */
+    background: #131418; /* Setting background color */
+    height: 100vh; /* Setting height */
+    width: 100%; /* Setting width */
+    flex-direction: column; /* Changing flex direction */
+    -webkit-clip-path: circle(50px at 90% -10%); /* Adding webkit clip-path */
+    clip-path: circle(50px at 90% -20%); /* Adding clip-path */
+    transition: all 1s ease-out; /* Adding transition */
+    pointer-events: none; /* Disabling pointer events */
+  }
+
+  /* Styling for open navigation links */
+  .nav-links.open {
+    -webkit-clip-path: circle(
+      1000px at 90% -10%
+    ); /* Changing webkit clip-path */
+    clip-path: circle(1000px at 90% -10%); /* Changing clip-path */
+    pointer-events: all; /* Enabling pointer events */
+  }
+
+  /* Styling navigation link items */
+  .nav-links li {
+    opacity: 0; /* Setting opacity */
+  }
+
+  /* Setting transition delay for navigation link items */
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s; /* Adding transition */
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s; /* Adding transition */
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s; /* Adding transition */
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s; /* Adding transition */
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s; /* Adding transition */
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s; /* Adding transition */
+    margin: 0; /* Removing margin */
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s; /* Adding transition */
+    margin: 0; /* Removing margin */
+  }
+
+  /* Setting opacity for fade effect */
+  li.fade {
+    opacity: 1; /* Setting opacity */
+  }
+}
+
+/* Styling for hamburger icon animation on click */
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px); /* Transforming */
+}
+.toggle .line2 {
+  transition: all 0.7s ease; /* Adding transition */
+  width: 0; /* Setting width */
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px); /* Transforming */
+}
+
+/* Styling for hovered list items */
+li.item:hover {
+  text-decoration: underline; /* Underline effect on hover */
+  text-shadow: 5px 5px 5px whitesmoke; /* Adding shadow on hover */
+}
+
+/* Styling for a specific font */
+.pacifico-regular {
+  font-family: 'Pacifico', cursive; /* Using Pacifico font */
+  font-weight: 400; /* Setting font weight */
+  font-style: normal; /* Setting font style */
+}
+
+/* Styling for the home section */
+.home {
+  height: 100vh; /* Setting full viewport height */
+}
+
+/* Styling for the navigation bar */
+.nav {
+  z-index: 2; /* Setting z-index */
+  position: sticky; /* Making navigation bar sticky */
+  top: 0; /* Positioning at the top */
+  left: 0; /* Positioning at the left */
+  display: flex; /* Displaying as flex container */
+  align-items: center; /* Aligning items */
+  font-size: 1.3rem; /* Setting font size */
+  height: 5rem; /* Setting height */
+  background-color: #070f2b; /* Setting background color */
+  overflow: hidden; /* Hiding overflow */
+}
+
+/* Styling for the logo */
+.logo {
+  flex: 2; /* Setting flex */
+  padding-left: 3rem; /* Adding left padding */
+  font-family: 'Pacifico', cursive; /* Using Pacifico font */
+  font-size: 2.5rem; /* Setting font size */
+  color: #027b9a; /* Setting color */
+}
+
+/* Styling for the menu */
+.menu {
+  flex: 5; /* Setting flex */
+}
+
+/* Styling for navigation items list */
+.itemList {
+  display: flex; /* Displaying as flex container */
+  list-style-type: none; /* Removing list style */
+  font-family: 'Red Hat Display', sans-serif; /* Setting font family */
+  cursor: pointer; /* Adding cursor */
+  color: rgb(255, 234, 236); /* Setting color */
+}
+
+/* Styling for navigation items */
+.item {
+  padding: 1rem; /* Adding padding */
+}
+
+/* Styling for the container */
+.container {
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Setting flex direction */
+  justify-content: center; /* Justifying content */
+  align-items: center; /* Aligning items */
+  height: 79vh; /* Setting height */
+}
+
+/* Styling for projects section */
+.project-title {
+  padding: 0; /* Removing padding */
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Styling for project titles and descriptions */
+.title,
+.description {
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Styling for project images on hover */
+img:hover {
+  transition: transform 0.3s ease-in-out; /* Adding transition */
+  -webkit-transform: scale(1.1); /* Scaling on hover */
+  -moz-transform: scale(1.1); /* Scaling on hover */
+  -ms-transform: scale(1.1); /* Scaling on hover */
+  -o-transform: scale(1.1); /* Scaling on hover */
+  transform: scale(1.1); /* Scaling on hover */
+}
+
+/* Styling for project section */
+.project {
+  display: flex; /* Displaying as flex container */
+  flex-wrap: wrap; /* Allowing wrapping */
+  justify-content: space-around; /* Justifying content */
+}
+
+/* Styling for main project title */
+.title-main {
+  text-align: center; /* Centering text */
+  font-size: 3rem; /* Setting font size */
+  padding: 30px 0; /* Adding padding */
+  cursor: pointer; /* Adding cursor */
+  color: rgb(130, 1, 1); /* Setting color */
+}
+
+/* Styling for project boxes */
+.project-box {
+  border: 1px solid black; /* Adding border */
+  height: 500px; /* Setting height */
+  width: 400px; /* Setting width */
+  margin: 15px; /* Adding margin */
+  padding: 15px; /* Adding padding */
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Setting flex direction */
+  background: #004658; /* Setting background color */
+}
+
+/* Styling for project titles */
+.title {
+  text-align: center; /* Centering text */
+  font-size: 24px; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Styling for project images */
+.project-img {
+  height: 300px; /* Setting height */
+  width: 300px; /* Setting width */
+  padding: 20px 50px; /* Adding padding */
+}
+
+/* Styling for images */
+img {
+  height: 300px; /* Setting height */
+  width: 300px; /* Setting width */
+}
+
+/* Styling for project descriptions */
+.description {
+  text-align: center; /* Centering text */
+  padding: 20px 10px; /* Adding padding */
+}
+
+/* Styling for buttons */
+button {
+  background: #027b9a; /* Setting background color */
+  height: 3rem; /* Setting height */
+}
+
+/* Styling for button hover effect */
+button:hover {
+  box-shadow: 3px 3px 5px wheat, -3px -3px 5px wheat; /* Adding box shadow on hover */
+}
+
+/* Styling for latest news section */
+.latest-news {
+  height: 100vh; /* Setting full viewport height */
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Setting flex direction */
+  justify-content: space-around; /* Justifying content */
+  align-items: center; /* Aligning items */
+}
+
+/* Styling for news section */
+.news {
+  -webkit-animation: roll-in-left 2s ease-out both; /* Adding animation */
+  background: #004658; /* Setting background color */
+  animation: roll-in-left 2s ease-out both; /* Adding animation */
+  border: 1px solid #000000; /* Adding border */
+  height: 550px; /* Setting height */
+  width: 800px; /* Setting width */
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Setting flex direction */
+  justify-content: space-around; /* Justifying content */
+  border-radius: 80px 80px 15px 15px; /* Adding border radius */
+}
+
+/* latest news section */
+
+.latest-news {
+  height: 100vh; /* Setting height to 100% of viewport height */
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Arranging items in a column */
+  justify-content: space-around; /* Distributing space around items */
+  align-items: center; /* Aligning items to center */
+}
+
+.news {
+  -webkit-animation: roll-in-left 2s ease-out both; /* Webkit animation */
+  animation: roll-in-left 2s ease-out both; /* Standard animation */
+  background: #004658; /* Setting background color */
+  border: 1px solid #000000; /* Adding border */
+  height: 550px; /* Setting height */
+  width: 800px; /* Setting width */
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Arranging items in a column */
+  justify-content: space-around; /* Distributing space around items */
+  border-radius: 80px 80px 15px 15px; /* Adding border radius */
+}
+
+/* Changing border color on hover */
+.news:hover {
+  border: 5px solid #6c0101; /* Changing border color */
+}
+
+/* Styling for individual news lines */
+.new-line {
+  text-align: center; /* Centering text */
+  padding: 0 30px; /* Adding padding */
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Scrolling bar styling */
+
+.scroller {
+  overflow: auto; /* Adding overflow for scrolling */
+  padding: 1rem; /* Adding padding */
+  scroll-timeline-name: --scroller; /* Adding scroll timeline name */
+  scroll-timeline-axis: inline; /* Adding scroll timeline axis */
+}
+
+.scroller p,
+h2 {
+  text-align: center; /* Centering text */
+}
+
+/* Styling for ordered and unordered lists in the scroller */
+.scroller ol,
+.scroller ul {
+  display: flex; /* Displaying as flex container */
+  gap: 1rem; /* Adding gap between items */
+  list-style: none; /* Removing default list styles */
+  padding-left: 0; /* Removing left padding */
+  counter-reset: list-item; /* Resetting counter for list items */
+  perspective: 9000px; /* Adding perspective */
+  transform-style: preserve-3d; /* Preserving 3D transformations */
+  perspective-origin: 50% 50%; /* Setting perspective origin */
+}
+
+/* Styling for individual list items */
+.scroller ol > li,
+.scroller ul > li {
+  flex: 1 1 240px; /* Setting flex properties */
+  min-width: 240px; /* Setting minimum width */
+  border: 1px solid currentColor; /* Adding border */
+  padding: 1rem; /* Adding padding */
+  animation: auto ease-in-out intro forwards, auto ease-in-out outro forwards; /* Adding animations */
+  animation-timeline: view(inline); /* Setting animation timeline */
+  animation-range: entry, exit; /* Setting animation range */
+  transform-origin: bottom center; /* Setting transform origin */
+}
+
+/* Styling for paragraph and header elements within scroller */
+.scroller ol p,
+.scroller ol h2,
+.scroller ul p,
+.scroller ul h2 {
+  margin-top: 1rem; /* Adding top margin */
+  margin-bottom: 0; /* Removing bottom margin */
+}
+
+/* Styling for headers within scroller */
+.scroller ol h2,
+.scroller ul h2 {
+  color: rgb(212, 212, 212); /* Setting text color */
+  font-weight: bold; /* Setting font weight */
+}
+
+/* Styling for list items in the scroller */
+.scroller ol > li {
+  display: flex; /* Displaying as flex container */
+  flex-direction: column; /* Arranging items in a column */
+  color: #ffffff; /* Setting text color */
+  position: relative; /* Positioning relative */
+  overflow: hidden; /* Hiding overflow */
+}
+
+/* Styling for list item counter */
+.scroller ol > li::before {
+  counter-increment: list-item; /* Incrementing counter */
+  content: counter(list-item) '.'; /* Adding counter content */
+  font-size: 5em; /* Setting font size */
+  font-weight: bold; /* Setting font weight */
+  color: #fff; /* Setting text color */
+  margin-bottom: 1rem; /* Adding bottom margin */
+  line-height: 1; /* Setting line height */
+}
+
+/* Styling for image after list item */
+.scroller ol > li::after {
+  content: ''; /* Adding content */
+  background-image: var(--bg); /* Setting background image */
+  position: absolute; /* Positioning absolute */
+  inset: -20px; /* Setting inset */
+  background-size: cover; /* Setting background size */
+  transform: scale(1); /* Setting scale */
+  transition: transform 0.5s ease-out, opacity 0.4s linear; /* Adding transition */
+  opacity: 0; /* Setting opacity */
+  z-index: -1; /* Setting z-index */
+}
+
+/* Changing styles on hover */
+.scroller ol > li:hover {
+  color: #fff; /* Changing text color */
+}
+
+/* Changing styles on hover */
+.scroller ol > li:hover::after {
+  transform: scale(1.1) rotate(4deg); /* Changing transform */
+  opacity: 0.8; /* Changing opacity */
+}
+
+/* Keyframes for intro animation */
+@keyframes intro {
+  from {
+    transform-origin: center left; /* Setting transform origin */
+    opacity: 0; /* Setting opacity */
+    scale: 0; /* Setting scale */
+  }
+  to {
+    transform-origin: center left; /* Setting transform origin */
+    opacity: 1; /* Setting opacity */
+    scale: 1; /* Setting scale */
+  }
+}
+
+/* Keyframes for outro animation */
+@keyframes outro {
+  from {
+    transform-origin: center right; /* Setting transform origin */
+    opacity: 1; /* Setting opacity */
+    scale: 1; /* Setting scale */
+  }
+  to {
+    transform-origin: center right; /* Setting transform origin */
+    opacity: 0; /* Setting opacity */
+    scale: 0; /* Setting scale */
+  }
+}
+
+/* Styling for scroller background */
+.scroller {
+  background: #004658; /* Setting background color */
+}
+
+/* Tabs animation */
+
+ul {
+  list-style: none; /* Removing default list styles */
+}
+
+/* Styling for tabs */
+.tabs {
+  width: 80%; /* Setting width */
+  height: 100px; /* Setting height */
+  margin: auto; /* Setting margins */
+  margin-top: 50px; /* Setting top margin */
+  display: flex; /* Displaying as flex container */
+  align-items: center; /* Aligning items */
+  box-shadow: 10px 10px 19px #87b7e6, -10px -10px 19px #87b7e6; /* Adding box shadow */
+  overflow: hidden; /* Hiding overflow */
+  border-radius: 10px; /* Adding border radius */
+}
+
+/* Styling for tab items */
+.tabs li {
+  background-color: #004658; /* Setting background color */
+  width: 25%; /* Setting width */
+  height: 100%; /* Setting height */
+  display: flex; /* Displaying as flex container */
+  align-items: center; /* Aligning items */
+  justify-content: center; /* Justifying content */
+  color: #ffffff; /* Setting text color */
+  font-family: 'Poppins', sans-serif; /* Setting font family */
+  transition: 0.5s; /* Adding transition */
+  cursor: pointer; /* Adding cursor */
+}
+
+/* Changing styles on hover */
+.tabs li:hover {
+  box-shadow: 10px 10px 19px #87b7e6, -10px -10px 19px #87b7e6; /* Changing box shadow */
+  color: #ff00ee; /* Changing text color */
+  position: relative; /* Positioning relative */
+  z-index: 1; /* Setting z-index */
+  border-radius: 10px; /* Adding border radius */
+}
+
+/* Styling for active tab */
+.active {
+  background: linear-gradient(
+    45deg,
+    #00095b72,
+    #04007780
+  ); /* Setting background gradient */
+  box-shadow: 10px 10px 19px #5e5ca3, -10px -10px 19px #3d52a8; /* Adding box shadow */
+  color: #e09cfd; /* Setting text color */
+  position: relative; /* Positioning relative */
+  z-index: 1; /* Setting z-index */
+  border-radius: 10px; /* Adding border radius */
+}
+
+/* Styling for contents */
+.contents {
+  width: 80%; /* Setting width */
+  margin: auto; /* Setting margins */
+  margin-top: 50px; /* Setting top margin */
+  display: flex; /* Displaying as flex container */
+  flex-wrap: wrap; /* Wrapping items */
+  justify-content: space-between; /* Distributing space between items */
+  gap: 30px; /* Adding gap between items */
+}
+/* Styling for boxes */
+.box {
+  gap: 20px; /* Adding gap between items */
+  background: linear-gradient(
+    145deg,
+    #004658,
+    #2a3139
+  ); /* Adding gradient background */
+  box-shadow: 10px 10px 19px #87b7e6, -10px -10px 19px #87b7e6; /* Adding box shadow */
+  border-radius: 10px; /* Adding border radius */
+  padding: 20px; /* Adding padding */
+  width: 100%; /* Setting width to 100% */
+  animation: moving 1s ease; /* Adding animation */
+  margin-bottom: 40px; /* Adding bottom margin */
+}
+
+/* Styling for images within boxes */
+.box img {
+  width: 50%; /* Setting width */
+  border-radius: 10px; /* Adding border radius */
+}
+
+/* Styling for headings within boxes */
+.box h3 {
+  color: #ffffff; /* Setting text color */
+  text-align: center; /* Centering text */
+  font-family: 'Poppins', sans-serif; /* Setting font family */
+  font-size: 2rem; /* Setting font size */
+  margin-bottom: 20px; /* Adding bottom margin */
+}
+
+/* Styling for paragraphs within boxes */
+.box p {
+  color: #ffffff; /* Setting text color */
+  opacity: 0.5; /* Setting opacity */
+  font-family: 'Poppins', sans-serif; /* Setting font family */
+  font-size: 1rem; /* Setting font size */
+  text-align: center; /* Centering text */
+  padding: 20px 60px; /* Adding padding */
+  font-size: 20px; /* Setting font size */
+  line-height: 40px; /* Setting line height */
+}
+
+/* Classes for toggling visibility */
+.show {
+  display: flex; /* Displaying as flex container */
+}
+
+.hide {
+  display: none; /* Hiding element */
+}
+
+/* Keyframes for box animation */
+@keyframes moving {
+  from {
+    transform: translateX(-50px); /* Translating horizontally */
+    opacity: 0; /* Setting opacity */
+  }
+  to {
+    transform: translateX(0px); /* Translating horizontally */
+    opacity: 1; /* Setting opacity */
+  }
+}
+
+/* Styling for home page animation */
+/* home animation */
+.pic-ctn {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100vw);
+    -moz-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+    -o-transform: translateX(100vw);
+    transform: translateX(100vw);
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+    transform: translateX(-100vw);
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 15vh;
+}
+
+.pic-ctn > img {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  left: 200px;
+  animation: display 10s infinite;
+  width: 1100px;
+  height: 500px;
+  object-fit: cover;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+img:nth-child(4) {
+  animation-delay: 6s;
+}
+img:nth-child(5) {
+  animation-delay: 8s;
+}
+
+/* Styling for links */
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.pg-footer {
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer {
+  background-color: #070f2b;
+  color: #fff;
+}
+.footer-wave-svg {
+  background-color: transparent;
+  display: block;
+  height: 30px;
+  position: relative;
+  top: -1px;
+  width: 100%;
+}
+.footer-wave-path {
+  fill: #fffff2;
+}
+
+.footer-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1230px;
+  padding: 40px 15px 450px;
+  position: relative;
+}
+
+.footer-content-column {
+  box-sizing: border-box;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  color: #fff;
+}
+
+.footer-content-column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-logo-link {
+  display: inline-block;
+}
+.footer-menu {
+  margin-top: 30px;
+}
+
+.footer-menu-name {
+  color: #fffff2;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bolder;
+  letter-spacing: 0.1em;
+  line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+.footer-menu-list {
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-left: 0;
+}
+.footer-menu-list li {
+  margin-top: 5px;
+}
+
+.footer-call-to-action-description {
+  color: #fffff2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer-call-to-action-button:hover {
+  background-color: #fffff2;
+  color: #004658;
+}
+.button:last-of-type {
+  margin-right: 0;
+}
+.footer-call-to-action-button {
+  background-color: #004658;
+  border-radius: 21px;
+  color: #fffff2;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 18px;
+  padding: 12px 30px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  position: relative;
+}
+.footer-call-to-action {
+  margin-top: 30px;
+}
+.footer-call-to-action-title {
+  color: #fffff2;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+}
+.footer-call-to-action-link-wrapper {
+  margin-bottom: 0;
+  margin-top: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.footer-call-to-action-link-wrapper a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-social-links {
+  bottom: 0;
+  height: 54px;
+  position: absolute;
+  right: 0;
+  width: 236px;
+}
+
+.footer-social-amoeba-svg {
+  height: 54px;
+  left: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 236px;
+}
+
+.footer-social-amoeba-path {
+  fill: #004658;
+}
+
+.footer-social-link.linkedin {
+  height: 26px;
+  left: 3px;
+  top: 11px;
+  width: 26px;
+}
+
+.footer-social-link {
+  display: block;
+  padding: 10px;
+  position: absolute;
+}
+
+.hidden-link-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+  top: 50%;
+}
+
+.footer-social-icon-svg {
+  display: block;
+}
+
+.footer-social-icon-path {
+  fill: #fffff2;
+  transition: fill 0.2s;
+}
+
+.footer-social-link.twitter {
+  height: 28px;
+  left: 62px;
+  top: 3px;
+  width: 28px;
+}
+
+.footer-social-link.youtube {
+  height: 24px;
+  left: 123px;
+  top: 12px;
+  width: 24px;
+}
+
+.footer-social-link.github {
+  height: 34px;
+  left: 172px;
+  top: 7px;
+  width: 34px;
+}
+
+.footer-copyright {
+  background-color: #004658;
+  color: #fff;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.footer-copyright-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.footer-copyright-text {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.footer-copyright-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Query For different screens */
+@media (min-width: 320px) and (max-width: 479px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
+  }
+}
+@media (min-width: 480px) and (max-width: 599px) {
+  /* smartphones, Android phones, landscape iPhone */
+  .footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
+  }
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 1050px;
+    position: relative;
+  }
+}
+
+@media (min-width: 760px) {
+  .footer-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1230px;
+    padding: 40px 15px 450px;
+    position: relative;
+  }
+
+  .footer-wave-svg {
+    height: 50px;
+  }
+
+  .footer-content-column {
+    width: 24.99%;
+  }
+}
+@media (min-width: 568px) {
+  .footer-content-column {
+    width: 49.99%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  li.item {
+    display: none;
+  }
+
+  .pic-ctn {
+    display: none;
+  }
+}
